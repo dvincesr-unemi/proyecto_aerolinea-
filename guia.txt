@@ -1,0 +1,1361 @@
+<!DOCTYPE html>                  <!-- 1. Le dice al navegador: esto es HTML5 -->
+<html lang="es">                 <!-- 2. Raíz de todo. lang = idioma de la página -->
+<head>                           <!-- 3. Configuración: NO se ve en la página -->
+  <meta charset="UTF-8">         <!--    Permite tildes y ñ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Se adapta al celular -->
+  <title>Aerolínea</title>       <!--    Texto de la pestaña del navegador -->
+  <link rel="stylesheet" href="estilos.css">  <!-- Conecta un archivo CSS externo -->
+</head>
+<body>                           <!-- 4. Todo lo VISIBLE va aquí -->
+  <h1>Hola mundo</h1>
+
+  <script src="app.js">
+
+
+<!-- Los títulos van de h1 (más grande) a h6 (más pequeño) -->
+<h1>Aerolínea Ecuador</h1>   <!-- título principal -->
+<h2>Vuelos nacionales</h2>    <!-- título de una sección -->
+<h3>Guayaquil → Quito</h3>    <!-- subtítulo -->
+<h4>Clase económica</h4>
+<h5>Equipaje</h5>
+<h6>Condiciones</h6>          <!-- el menor -->
+
+
+<!-- Cada <p> es un bloque de texto separado -->
+<p>Bienvenido a bordo. Abroche su cinturón.</p>
+
+<!-- Los espacios extra y los Enter se ignoran -->
+<p>Este     texto   tiene
+   muchos    espacios.</p>
+
+
+<p>
+  Vuelo <strong>AE-204</strong>,          <!-- strong: importante (negrita) -->
+  salida <em>puntual</em>.                 <!-- em: énfasis (cursiva) -->
+  Puerta <mark>B12</mark>.                 <!-- mark: resaltado -->
+  Precio <del>$120</del> $95               <!-- del: tachado (ya no vale) -->
+  <small>impuestos incluidos</small>       <!-- small: letra chica -->
+</p>
+
+
+<p>
+  Ana Torres<br>        <!-- br: baja a la siguiente línea -->
+  Asiento 1A<br>
+  Vuelo AE-204
+</p>
+<hr>                    <!-- hr: línea separadora -->
+<p>Luis Paredes</p>
+
+
+<!-- Enlace a otra página de tu sitio -->
+<a href="reservas.html">Mis reservas</a><br>
+
+<!-- Enlace a otro sitio, en pestaña nueva -->
+<a href="https://www.google.com" target="_blank">Buscar en Google</a><br>
+
+<!-- Enlace que abre el correo -->
+<a href="mailto:ayuda@aerolinea.ec">Escríbenos</a><br>
+
+<!-- Enlace a una parte de la misma página (id="equipaje") -->
+<a href="#equipaje">Ir a equipaje</a>
+
+Imagen. src = ruta del archivo, alt = texto si la imagen no carga (y para lectores de pantalla).
+<!-- Normalmente: src="img/avion.png" (ruta a tu archivo) -->
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='70'%3E%3Crect width='160' height='70' rx='10' fill='%231A73E8'/%3E%3Ctext x='80' y='44' font-size='22' font-family='sans-serif' fill='white' text-anchor='middle'%3EGYE → UIO%3C/text%3E%3C/svg%3E"
+     alt="Ruta Guayaquil Quito"
+     width="160">            <!-- width: ancho en píxeles -->
+
+<!-- Si la ruta está mal, se ve el alt: -->
+<img src="no-existe.png" alt="🖼️ Foto del avión">
+
+
+<h4>Equipaje permitido</h4>
+<ul>                          <!-- ul: unordered list -->
+  <li>1 mochila</li>          <!-- li: list item -->
+  <li>1 maleta de mano</li>
+  <li>Líquidos de 100 ml</li>
+</ul>
+
+
+<!-- style="..." solo para VER el tamaño de cada caja -->
+<div style="background:#E8F0FE">div 1: ocupa todo el ancho</div>
+<div style="background:#F3E8FD">div 2: empieza en otra línea</div>
+
+<p>
+  Pasajero <span style="background:#FEF7E0">Ana</span>
+  en asiento <span style="background:#E6F4EA">1A</span>  <!-- span se queda en la línea -->
+</p>
+
+
+<style> /* bordes solo para ver cada parte */
+  header, nav, main, section, footer { border: 1px dashed #999; padding: 4px; margin: 3px; }
+</style>
+
+<header>✈️ Aerolínea           <!-- cabecera: logo, título -->
+  <nav>Inicio | Vuelos | Reservas</nav>   <!-- menú de navegación -->
+</header>
+<main>                         <!-- contenido principal (uno por página) -->
+  <section>Vuelos de hoy</section>        <!-- una sección temática -->
+  <section>Ofertas</section>
+</main>
+<footer>© 2026 Aerolínea</footer>         <!-- pie de página -->
+
+
+<style> /* bordes solo para ver cada parte */
+  header, nav, main, section, footer { border: 1px dashed #999; padding: 4px; margin: 3px; }
+</style>
+
+<header>✈️ Aerolínea           <!-- cabecera: logo, título -->
+  <nav>Inicio | Vuelos | Reservas</nav>   <!-- menú de navegación -->
+</header>
+<main>                         <!-- contenido principal (uno por página) -->
+  <section>Vuelos de hoy</section>        <!-- una sección temática -->
+  <section>Ofertas</section>
+</main>
+<footer>© 2026 Aerolínea</footer>         <!-- pie de página -->
+
+
+
+<style> /* sin CSS la tabla no tiene bordes */
+  table { border-collapse: collapse; }
+  th, td { border: 1px solid #aaa; padding: 4px 10px; }
+</style>
+
+<table>
+  <thead>                      <!-- grupo de encabezados -->
+    <tr>                       <!-- tr: table row (fila) -->
+      <th>Pasajero</th>        <!-- th: encabezado (negrita) -->
+      <th>Asiento</th>
+    </tr>
+  </thead>
+  <tbody>                      <!-- grupo de datos -->
+    <tr><td>Ana</td><td>1A</td></tr>   <!-- td: table data -->
+    <tr><td>Luis</td><td>2B</td></tr>
+    <tr><td colspan="2">Total: 2</td></tr>  <!-- ocupa 2 columnas -->
+  </tbody>
+</table>
+
+
+<form>                                   <!-- agrupa los campos -->
+  <label for="nombre">Nombre:</label>    <!-- for = id del input -->
+  <input id="nombre" type="text"
+         placeholder="Ej: Ana"
+         required>                       <!-- required: obligatorio -->
+  <!-- placeholder: texto gris de ayuda -->
+  <button>Enviar</button>
+</form>
+
+
+<p>Texto:      <input type="text" value="Ana"></p>        <!-- value: valor inicial -->
+<p>Número:     <input type="number" min="1" max="9"></p>  <!-- solo números -->
+<p>Correo:     <input type="email"></p>                   <!-- valida el @ -->
+<p>Clave:      <input type="password" value="1234"></p>   <!-- oculta el texto -->
+<p>Fecha:      <input type="date"></p>                    <!-- calendario -->
+<p>
+  <input type="checkbox" checked> Equipaje extra         <!-- casilla sí/no -->
+</p>
+<p>
+  <input type="radio" name="clase" checked> Económica    <!-- mismo name = -->
+  <input type="radio" name="clase"> Ejecutiva            <!-- elige solo uno -->
+</p>
+
+
+<label>Destino:</label>
+<select id="destino">
+  <option value="">-- Elige --</option>
+  <option value="UIO">Quito</option>        <!-- JS leerá "UIO" -->
+  <option value="CUE" selected>Cuenca</option>  <!-- selected: elegida -->
+  <option value="GPS">Galápagos</option>
+</select>
+
+
+<label>Destino:</label>
+<select id="destino">
+  <option value="">-- Elige --</option>
+  <option value="UIO">Quito</option>        <!-- JS leerá "UIO" -->
+  <option value="CUE" selected>Cuenca</option>  <!-- selected: elegida -->
+  <option value="GPS">Galápagos</option>
+</select>
+
+
+<label>Observaciones:</label><br>
+<textarea rows="3" cols="30"
+          placeholder="Ej: viaja con mascota"></textarea>
+
+
+<form>
+  <input value="Ana">
+  <button type="submit">Reservar</button>  <!-- envía el formulario -->
+  <button type="reset">Borrar</button>     <!-- vacía los campos -->
+  <button type="button">Ayuda</button>     <!-- botón libre para JS -->
+</form>
+
+
+<style>
+  .asiento { display: inline-block; padding: 6px 10px; border-radius: 6px; }
+  .libre   { background: #E6F4EA; }   /* class "libre" = verde */
+  .ocupado { background: #FCE8E6; }   /* class "ocupado" = rojo */
+</style>
+
+<div id="fila1">                                   <!-- id único -->
+  <span class="asiento libre" title="Ventana" data-asiento="1A">1A</span>
+  <span class="asiento ocupado" title="Pasillo" data-asiento="1B">1B</span>
+  <span class="asiento libre" style="border:2px solid green">1C</span>
+</div>
+<!-- una etiqueta puede tener VARIAS clases separadas por espacio -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">                  <!-- tildes y ñ -->
+  <title>Reserva</title>                  <!-- texto de la pestaña -->
+</head>
+<body>
+  <header>
+    <h1>✈️ Reserva tu vuelo</h1>          <!-- título principal -->
+  </header>
+
+  <main>
+    <form>                                <!-- formulario de reserva -->
+      <p>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" placeholder="Ej: Ana" required>
+      </p>
+      <p>
+        <label for="destino">Destino:</label>
+        <select id="destino">             <!-- lista desplegable -->
+          <option value="UIO">Quito</option>
+          <option value="CUE">Cuenca</option>
+        </select>
+      </p>
+      <p>
+        <input type="checkbox" id="extra">     <!-- casilla sí/no -->
+        <label for="extra">Equipaje extra</label>
+      </p>
+      <button type="submit">Reservar</button>
+    </form>
+
+    <h2>Pasajeros registrados</h2>
+    <ul>                                  <!-- lista con viñetas -->
+      <li>Ana - 1A</li>
+      <li>Luis - 2B</li>
+    </ul>
+  </main>
+
+  <footer><small>© 2026 Aerolínea</small></footer>
+</body>
+</html>
+
+
+<!-- 1. EN LÍNEA: atributo style (solo afecta a ESA etiqueta) -->
+<p style="color: red;">Texto rojo</p>
+
+<!-- 2. INTERNO: etiqueta <style> dentro del <head> -->
+<style>
+  p { color: blue; }      /* todos los párrafos azules */
+</style>
+
+<!-- 3. EXTERNO: archivo aparte (la mejor opción en proyectos) -->
+<link rel="stylesheet" href="estilos.css">
+
+/* --- dentro de estilos.css (sin etiquetas <style>) --- */
+p { color: green; }       /* los comentarios CSS van así */
+
+
+<style>
+  p { color: #1A73E8; }       /* todos los <p> en azul */
+  h3 { font-style: italic; }  /* todos los <h3> en cursiva */
+</style>
+
+<h3>Vuelo AE-204</h3>
+<p>Salida 08:00</p>
+<p>Llegada 08:55</p>
+
+
+<style>
+  .nodo   { border: 2px solid #7B3FE4; padding: 6px; }  /* class="nodo" */
+  .cabeza { background: #E8F0FE; }                      /* class="cabeza" */
+</style>
+
+<div class="nodo cabeza">Ana (tiene 2 clases)</div>
+<div class="nodo">Luis</div>
+<div>Marta (sin clase: sin estilo)</div>
+
+
+<style>
+  #titulo { color: white; background: #E65100; padding: 6px; }
+</style>
+
+<h3 id="titulo">Puerta de embarque B12</h3>  <!-- id="titulo" -->
+<h3>Otro título sin id</h3>
+
+a, b (grupo)
+Separar con coma aplica el MISMO estilo a varios selectores.
+<style>
+  h3, p, .nota { font-family: monospace; }   /* h3 Y p Y .nota */
+</style>
+
+<h3>Título</h3>
+<p>Párrafo</p>
+<span class="nota">Nota</span>
+
+a b (descendiente)
+Con espacio: pinta los b que estén DENTRO de a (a cualquier profundidad).
+<style>
+  .tren span { color: #7B3FE4; font-weight: bold; } /* span dentro de .tren */
+</style>
+
+<div class="tren">
+  <span>Ana</span> → <span>Luis</span>   <!-- sí se pintan -->
+</div>
+<span>Marta (fuera del tren)</span>    <!-- no se pinta -->
+
+
+<style>
+  .lista > li { color: #34A853; }   /* solo hijos directos de .lista */
+</style>
+
+<ul class="lista">
+  <li>Hijo directo (verde)
+    <ul><li>Nieto (no verde)</li></ul>
+  </li>
+  <li>Hijo directo (verde)</li>
+</ul>
+
+
+<style>
+  * { margin: 0; box-sizing: border-box; }  /* todo sin margen */
+  .caja * { color: #E65100; }             /* todo dentro de .caja */
+</style>
+
+<div class="caja">
+  <h4>Título</h4>
+  <p>Párrafo</p>
+</div>
+
+
+<style>
+  input[type="text"]   { border: 2px solid #1A73E8; }  /* inputs de texto */
+  input[type="number"] { border: 2px solid #E65100; }  /* inputs numéricos */
+  [data-estado="ocupado"] { background: #FCE8E6; }    /* data-estado="ocupado" */
+</style>
+
+<input type="text" placeholder="texto">
+<input type="number" placeholder="número">
+<p data-estado="ocupado">Asiento 2B ocupado</p>
+
+hover, movimiento al dar click
+<style>
+  button        { background: #7B3FE4; color: white; border: none; padding: 8px 14px; }
+  button:hover  { background: #5A2AAB; }        /* mouse encima */
+  button:active { transform: scale(0.95); }     /* mientras haces clic */
+  input:focus   { outline: 3px solid #F9AB00; } /* casilla con el cursor */
+</style>
+
+<button>Pasa el mouse</button>
+<input placeholder="Haz clic aquí">
+
+
+:first-child :last-child :nth-child()
+Pseudo-clases de POSICIÓN: según el lugar que ocupa entre sus hermanos.
+<style>
+  li:first-child     { color: #1A73E8; font-weight: bold; } /* el primero */
+  li:last-child      { color: #EA4335; }                    /* el último */
+  li:nth-child(even) { background: #F1F3F4; }               /* pares: 2, 4... */
+  /* nth-child(3) = el tercero · nth-child(odd) = impares */
+</style>
+
+<ul>
+  <li>Ana (head)</li>
+  <li>Luis</li>
+  <li>Marta</li>
+  <li>Pedro (último)</li>
+</ul>
+
+
+<style>
+  .nodo::before { content: "🧑 "; }              /* antes del texto */
+  .nodo::after  { content: " →"; color: #7B3FE4; } /* después del texto */
+</style>
+
+<span class="nodo">Ana</span>
+<span class="nodo">Luis</span>
+
+
+<style>
+  #aviso { color: green; }   /* id: gana (más específico) */
+  .alerta { color: red; }    /* clase: pierde contra el id */
+  p { color: blue; }         /* etiqueta: la más débil */
+</style>
+
+<p id="aviso" class="alerta">¿De qué color soy?</p>
+<!-- Borra la regla #aviso y mira quién gana ahora -->
+
+
+olor · px % rem em
+4 formas de escribir un color y las unidades de medida más usadas.
+<style>
+  .a { color: purple; }               /* por nombre */
+  .b { color: #1A73E8; }              /* hexadecimal #RRGGBB */
+  .c { color: rgb(52, 168, 83); }     /* rojo, verde, azul (0-255) */
+  .d { background: rgba(234, 67, 53, 0.3); } /* a = transparencia 0 a 1 */
+
+  .px  { width: 150px; background: #FEF7E0; }  /* px: fijo */
+  .pc  { width: 50%;   background: #E8F0FE; }  /* %: mitad del padre */
+  .rem { font-size: 1.5rem; }  /* rem: 1.5 x tamaño base (16px) = 24px */
+</style>
+
+<p class="a">purple</p><p class="b">#1A73E8</p>
+<p class="c">rgb()</p><p class="d">rgba() semitransparente</p>
+<div class="px">150px</div><div class="pc">50%</div>
+<p class="rem">1.5rem</p>
+
+
+<style>
+  .t {
+    font-family: Georgia, serif;    /* tipo de letra (y respaldo) */
+    font-size: 20px;                /* tamaño */
+    font-weight: bold;              /* grosor: normal, bold, 100-900 */
+    font-style: italic;             /* cursiva */
+    text-align: center;             /* left, center, right, justify */
+    text-transform: uppercase;      /* MAYÚSCULAS */
+    letter-spacing: 2px;            /* espacio entre letras */
+    line-height: 1.6;               /* alto de cada línea */
+    text-decoration: underline;     /* subrayado (none lo quita) */
+  }
+</style>
+
+<p class="t">Vuelo AE-204 a Quito</p>
+
+
+
+<style>
+  div { padding: 12px; margin: 4px; color: white; border-radius: 8px; }
+  .s { background-color: #1A73E8; }                               /* sólido */
+  .g { background: linear-gradient(90deg, #1A73E8, #7B3FE4); }    /* degradado */
+  .r { background: radial-gradient(circle, #F9AB00, #E65100); }   /* circular */
+</style>
+
+<div class="s">Color sólido</div>
+<div class="g">Degradado lineal (de izquierda a derecha)</div>
+<div class="r">Degradado radial</div>
+
+
+padding border margin box-sizing
+Cambia los números y mira cómo crece la caja.
+<style>
+  .nodo {
+    width: 150px;                 /* ancho del contenido */
+    padding: 10px 20px;           /* arriba/abajo 10, izquierda/derecha 20 */
+    border: 3px solid #7B3FE4;    /* grosor, estilo, color */
+    margin: 15px;                 /* espacio afuera, hacia los vecinos */
+    background: #F3E8FD;
+    box-sizing: border-box;       /* width INCLUYE padding y borde */
+  }
+  /* padding: 10px;              → los 4 lados
+     padding: 10px 20px;         → vertical | horizontal
+     padding: 1px 2px 3px 4px;   → arriba derecha abajo izquierda (reloj)
+     margin: 0 auto;             → centra un bloque con width */
+</style>
+
+<div class="nodo">Ana · 1A</div>
+<div class="nodo">Luis · 2B</div>
+
+
+border border-radius box-shadow
+Lo que hace que una caja se vea como una tarjeta.
+<style>
+  div { padding: 10px; margin: 8px; display: inline-block; }
+  .b1 { border: 2px dashed #1A73E8; }               /* solid, dashed, dotted */
+  .b2 { border-left: 6px solid #34A853; }           /* solo un lado */
+  .b3 { border: 2px solid #7B3FE4; border-radius: 12px; }  /* esquinas */
+  .b4 { border-radius: 50%; width: 60px; height: 60px; background: #F9AB00; } /* círculo */
+  .b5 { box-shadow: 0 4px 12px rgba(0,0,0,0.25); }  /* x  y  difuminado  color */
+</style>
+
+<div class="b1">dashed</div> <div class="b2">un lado</div>
+<div class="b3">redondeado</div> <div class="b4"></div>
+<div class="b5">sombra</div>
+
+
+display
+block = una fila entera · inline = en la línea, sin ancho · inline-block = en la línea CON ancho · none = oculto.
+<style>
+  span, div { background: #E8F0FE; border: 1px solid #1A73E8; margin: 3px; }
+  .bl { display: block; }                    /* como un div */
+  .il { display: inline; width: 200px; }     /* inline IGNORA el width */
+  .ib { display: inline-block; width: 90px; }/* respeta width y alto */
+  .no { display: none; }                     /* desaparece */
+</style>
+
+<span class="bl">block</span>
+<div class="il">inline</div><div class="il">inline</div>
+<span class="ib">inline-block</span><span class="ib">inline-block</span>
+<span class="no">no me ves</span>
+
+
+position: relative / absolute
+El padre relative es la referencia; el hijo absolute se coloca con top/left/right/bottom dentro de él.
+<style>
+  .nodo {
+    position: relative;           /* referencia para sus hijos */
+    display: inline-block;
+    margin-top: 25px; padding: 10px 18px;
+    border: 2px solid #7B3FE4; border-radius: 8px;
+  }
+  .etiqueta {
+    position: absolute;           /* sale del flujo normal */
+    top: -22px; left: 0;          /* 22px ARRIBA del nodo */
+    font-size: 12px; background: #F3E8FD; padding: 0 6px; border-radius: 8px;
+  }
+</style>
+
+<div class="nodo">
+  Ana
+  <span class="etiqueta">head</span>   <!-- flota sobre el nodo -->
+</div>
+
+
+transition transform
+Animan el cambio entre dos estados. Pasa el mouse por el nodo.
+
+<style>
+  .nodo {
+    display: inline-block; padding: 10px 18px;
+    background: #F3E8FD; border: 2px solid #7B3FE4; border-radius: 8px;
+    transition: all 0.3s;          /* anima TODO en 0.3 segundos */
+  }
+  .nodo:hover {
+    background: #7B3FE4; color: white;
+    transform: translateY(-6px) scale(1.1);  /* sube y crece */
+  }
+</style>
+
+<div class="nodo">Ana · 1A</div>
+
+
+<style>
+  /* Página */
+  body { font-family: sans-serif; background: #f5f7fb; padding: 10px; }
+
+  /* Contenedor: pone los nodos en fila (flexbox, siguiente tema) */
+  .tren { display: flex; align-items: center; gap: 6px; }
+
+  /* Cada nodo = una tarjeta */
+  .nodo {
+    background: #F3E8FD;          /* fondo lila */
+    border: 2px solid #7B3FE4;    /* borde morado */
+    border-radius: 8px;           /* esquinas redondeadas */
+    padding: 8px 14px;            /* relleno interno */
+    font-weight: bold;
+    transition: 0.2s;             /* animación suave */
+  }
+  .nodo:hover { background: #7B3FE4; color: white; }  /* al pasar el mouse */
+  .nodo:first-child { border-color: #1A73E8; }        /* el primero = head */
+
+  /* Flechas */
+  .flecha { color: #7B3FE4; font-size: 22px; }
+</style>
+
+<h3>Mi lista enlazada</h3>
+<div class="tren">
+  <div class="nodo">Ana · 1A</div>   <span class="flecha">→</span>
+  <div class="nodo">Luis · 2B</div>  <span class="flecha">→</span>
+  <div class="nodo">Marta · 3C</div> <span class="flecha">→</span>
+  <span>null</span>
+</div>
+
+flex-grow · flex: 1
+flex-grow dice cuánto del espacio libre toma cada hijo. flex: 1 = repartir en partes iguales.
+<style>
+  .fila { display: flex; gap: 6px; }
+  .fila div { background: #F3E8FD; border: 2px solid #7B3FE4; padding: 8px; }
+  .a { flex: 1; }   /* toma 1 parte del espacio libre */
+  .b { flex: 2; }   /* toma 2 partes: el doble que .a */
+  /* .c no tiene flex: solo mide su contenido */
+</style>
+
+<div class="fila">
+  <div class="a">flex: 1</div>
+  <div class="b">flex: 2</div>
+  <div class="c">sin flex</div>
+</div>
+
+
+order · align-self
+order cambia el orden visual sin tocar el HTML. align-self alinea a UN solo hijo distinto a los demás.
+<style>
+  .fila { display: flex; gap: 6px; height: 90px; align-items: flex-start;
+          background: #F8F9FA; }
+  .fila div { background: #E8F0FE; border: 2px solid #1A73E8; padding: 8px; }
+  .primero { order: -1; }          /* menor order = va antes (por defecto 0) */
+  .abajo { align-self: flex-end; } /* solo este se va abajo */
+</style>
+
+<div class="fila">
+  <div>Ana</div>
+  <div class="abajo">Luis (align-self)</div>
+  <div class="primero">Marta (order: -1)</div>
+</div>
+
+
+centrar · barra de menú · tren
+Las 3 combinaciones de flexbox más comunes.
+
+<style>
+  /* 1. CENTRAR algo en ambas direcciones */
+  .centro { display: flex; justify-content: center; align-items: center;
+            height: 70px; background: #E8F0FE; }
+
+  /* 2. BARRA: logo a la izquierda, menú a la derecha */
+  .barra { display: flex; justify-content: space-between; align-items: center;
+           background: #1A73E8; color: white; padding: 8px; margin: 6px 0; }
+
+  /* 3. TREN de nodos que baja de línea si no cabe */
+  .tren { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tren span { border: 2px solid #7B3FE4; padding: 4px 10px; border-radius: 6px; }
+</style>
+
+<div class="centro">✈️ Centrado perfecto</div>
+<div class="barra"><b>Aerolínea</b><span>Vuelos · Reservas · Ayuda</span></div>
+<div class="tren"><span>Ana</span><span>Luis</span><span>Marta</span><span>Pedro</span></div>
+
+
+3. Filas y gap
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3 columnas iguales */
+    grid-template-rows: 40px 70px;           /* fila 1: 40px, fila 2: 70px */
+    gap: 8px;                                /* espacio entre todas */
+    /* row-gap: 8px; column-gap: 20px;  → distinto en cada sentido */
+  }
+  .grid div { background: #F3E8FD; border: 2px solid #7B3FE4; }
+</style>
+
+<div class="grid">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
+</div>
+
+
+4. Que un hijo ocupe varias celdas
+<style>
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .grid div { background: #E8F0FE; border: 2px solid #1A73E8; padding: 6px; }
+
+  .ancho  { grid-column: span 2; }  /* ocupa 2 columnas */
+  .alto   { grid-row: span 2; }     /* ocupa 2 filas */
+  .total  { grid-column: 1 / -1; }  /* de la línea 1 a la última */
+</style>
+
+<div class="grid">
+  <div class="ancho">span 2 columnas</div>
+  <div class="alto">span 2 filas</div>
+  <div>3</div><div>4</div>
+  <div class="total">1 / -1 : toda la fila</div>
+</div>
+
+
+5. grid-template-areas: diseñar la página con nombres
+<style>
+  .pagina {
+    display: grid;
+    grid-template-columns: 120px 1fr;   /* menú angosto + contenido */
+    grid-template-areas:
+      "cabecera cabecera"               /* fila 1: cabecera en las 2 columnas */
+      "menu     contenido"              /* fila 2 */
+      "pie      pie";                   /* fila 3 */
+    gap: 6px;
+  }
+  .pagina > * { padding: 10px; border-radius: 6px; color: white; }
+  header { grid-area: cabecera;  background: #1A73E8; }  /* va a "cabecera" */
+  nav    { grid-area: menu;      background: #7B3FE4; }
+  main   { grid-area: contenido; background: #34A853; }
+  footer { grid-area: pie;       background: #5F6368; }
+</style>
+
+<div class="pagina">
+  <header>✈️ Aerolínea</header>
+  <nav>Menú</nav>
+  <main>Lista de pasajeros</main>
+  <footer>© 2026</footer>
+</div>
+
+
+grid para asientos
+5 columnas: 2 asientos + pasillo + 2 asientos. Verde = libre, rojo = ocupado.
+
+<style>
+  .avion {
+    display: grid;
+    grid-template-columns: 40px 40px 24px 40px 40px; /* A B pasillo C D */
+    gap: 6px;
+    justify-content: center;        /* centra la cuadrícula */
+    background: #F1F3F4; padding: 12px; border-radius: 40px 40px 10px 10px;
+  }
+  .asiento {
+    height: 36px; border-radius: 8px 8px 4px 4px;
+    display: flex; justify-content: center; align-items: center; /* centra el texto */
+    font: bold 12px sans-serif;
+  }
+  .libre   { background: #E6F4EA; border: 2px solid #34A853; }  /* 🟢 */
+  .ocupado { background: #FCE8E6; border: 2px solid #EA4335; }  /* 🔴 */
+  .pasillo { grid-column: 3; }      /* fuerza la columna del pasillo */
+</style>
+
+<div class="avion">
+  <div class="asiento libre">1A</div><div class="asiento ocupado">1B</div>
+  <div class="asiento libre" style="grid-column:4">1C</div><div class="asiento libre">1D</div>
+  <div class="asiento ocupado">2A</div><div class="asiento libre">2B</div>
+  <div class="asiento libre" style="grid-column:4">2C</div><div class="asiento ocupado">2D</div>
+</div>
+<!-- style="grid-column:4" salta el pasillo (columna 3) -->
+
+
+<!-- 1. INTERNO: dentro de <script>, al final del <body> -->
+<body>
+  <h1>Hola</h1>
+  <script>
+    console.log("Hola desde JS");   // se ve en la consola (F12)
+  </script>
+</body>
+
+<!-- 2. EXTERNO: archivo app.js (la mejor opción) -->
+<script src="app.js"></script>
+
+<!-- ¿Por qué al final? Porque JS necesita que el HTML ya exista
+     para poder buscar los elementos. -->
+
+
+// Comentario de una línea: JS lo ignora
+
+/* Comentario de
+   varias líneas */
+
+console.log("Hola, pasajero");       // muestra un texto
+console.log(5 + 3);                  // muestra el resultado: 8
+console.log("Asiento", "1A", 2026);  // varias cosas separadas por coma
+
+// El ; al final es opcional, pero ponlo siempre (buena costumbre)
+
+
+let asiento = "1A";       // let: su valor PUEDE cambiar
+asiento = "2B";           // ✅ se puede reasignar
+console.log(asiento);     // "2B"
+
+const vuelo = "AE-204";   // const: NO se puede reasignar
+// vuelo = "AE-999";      // ❌ quita el // y verás el error
+
+let precio;               // declarada sin valor
+console.log(precio);      // undefined (todavía no tiene valor)
+
+// Reglas de nombres: camelCase, sin espacios ni tildes, no empezar con número
+let nombrePasajero = "Ana";
+console.log(nombrePasajero);
+// var es la forma ANTIGUA: no la uses
+
+
+let nombre   = "Ana";            // string (texto): "..." o '...'
+let edad     = 28;               // number (enteros y decimales)
+let precio   = 95.50;            // también number
+let vip      = true;             // boolean: true o false
+let reserva  = null;             // null: vacío A PROPÓSITO (= None)
+let destino;                     // undefined: nunca se le dio valor
+let asientos = ["1A", "2B"];     // array (lista)
+let pasajero = { nombre: "Ana", asiento: "1A" };  // object (diccionario)
+
+// typeof te dice el tipo
+console.log(typeof nombre);      // "string"
+console.log(typeof edad);        // "number"
+console.log(typeof vip);         // "boolean"
+console.log(typeof destino);     // "undefined"
+console.log(typeof pasajero);    // "object"
+console.log(Array.isArray(asientos));  // true → así se pregunta si es array
+
+
+console.log(10 + 3);    // 13  suma
+console.log(10 - 3);    // 7   resta
+console.log(10 * 3);    // 30  multiplicación
+console.log(10 / 3);    // 3.333…  división (siempre decimal)
+console.log(10 % 3);    // 1   residuo (módulo)
+console.log(2 ** 3);    // 8   potencia
+
+let cantidad = 0;
+cantidad++;             // suma 1  → 1   (como cantidad += 1)
+cantidad += 5;          // suma 5  → 6
+cantidad--;             // resta 1 → 5
+console.log(cantidad);
+
+// ⚠️ Trampa: + con texto UNE en vez de sumar
+console.log("5" + 1);           // "51"
+console.log(Number("5") + 1);   // 6  → convierte texto a número primero
+
+
+// SIEMPRE usa === y !== (comparan valor Y tipo)
+console.log(5 === 5);      // true
+console.log(5 === "5");    // false  (número vs texto)
+console.log(5 == "5");     // true   (== convierte: evítalo)
+console.log(5 !== 3);      // true   distinto
+console.log(5 > 3, 5 <= 3);// true false
+
+// Lógicos
+let edad = 20, conBoleto = true;
+console.log(edad >= 18 && conBoleto);  // && = y   → true si AMBOS
+console.log(edad < 12 || conBoleto);   // || = o   → true si ALGUNO
+console.log(!conBoleto);               // !  = no  → invierte: false
+
+
+let nombre = "Ana", asiento = "1a";
+
+// Comillas invertidas ` ` permiten meter variables con ${ }
+console.log(`${nombre} va en el asiento ${asiento.toUpperCase()}`);
+
+let texto = "  Luis Paredes  ";
+console.log(texto.length);          // 16  cantidad de caracteres
+console.log(texto.trim());          // "Luis Paredes"  quita espacios
+console.log(texto.toLowerCase());   // minúsculas
+console.log(texto.includes("Luis"));// true  ¿contiene?
+console.log("AE-204".split("-"));   // ["AE", "204"]  separa
+console.log("Quito"[0]);            // "Q"  primer carácter
+
+
+let edad = 10;
+
+if (edad < 2) {                         // condición entre ( )
+  console.log("Bebé: viaja en brazos");
+} else if (edad < 12) {                 // si no, pregunta otra
+  console.log("Niño: tarifa reducida");
+} else {                                // si ninguna se cumplió
+  console.log("Adulto: tarifa completa");
+}
+
+// Ternario: un if corto que DEVUELVE un valor
+// condición ? siEsVerdad : siEsFalso
+let estado = edad >= 18 ? "adulto" : "menor";
+console.log(estado);
+
+
+let clase = "B";
+
+switch (clase) {                 // compara clase con cada case
+  case "A":
+    console.log("Primera clase");
+    break;                       // break: sale del switch
+  case "B":
+    console.log("Ejecutiva");
+    break;
+  default:                       // si ningún case coincide
+    console.log("Económica");
+}
+
+
+// for: cuando SABES cuántas veces
+// for (inicio; condición; paso)
+for (let i = 1; i <= 3; i++) {
+  console.log("Fila", i);
+}
+
+// while: mientras se cumpla (¡el de la lista enlazada!)
+let combustible = 3;
+while (combustible > 0) {
+  console.log("Volando... combustible:", combustible);
+  combustible--;                 // si olvidas esto: bucle infinito
+}
+
+// break y continue
+for (let i = 1; i <= 5; i++) {
+  if (i === 2) continue;         // salta el 2
+  if (i === 4) break;            // se detiene en el 4
+  console.log("i =", i);         // 1, 3
+}
+
+
+let pasajeros = ["Ana", "Luis", "Marta"];
+
+// for...of: recorre cada VALOR de un array (como for x in lista de Python)
+for (const p of pasajeros) {
+  console.log("Abordando:", p);
+}
+
+// forEach: igual, pero con una función; también da el índice
+pasajeros.forEach((p, i) => {
+  console.log(i, p);             // 0 Ana, 1 Luis, 2 Marta
+});
+
+
+// 1. Declaración clásica
+function precioFinal(precio, impuesto) {   // parámetros
+  return precio + precio * impuesto;       // return: devuelve el resultado
+}
+console.log(precioFinal(100, 0.15));       // 115
+
+// 2. Función flecha (la más usada hoy)
+const saludar = (nombre) => {
+  return `Hola ${nombre}`;
+};
+console.log(saludar("Ana"));
+
+// 3. Flecha corta: una sola línea = return automático
+const doble = n => n * 2;
+console.log(doble(21));                    // 42
+
+// Parámetro con valor por defecto
+function reservar(nombre, clase = "económica") {
+  console.log(`${nombre} en ${clase}`);
+}
+reservar("Luis");                  // usa "económica"
+reservar("Marta", "ejecutiva");
+
+
+let cola = ["Ana", "Luis"];      // se crea con [ ]
+
+console.log(cola[0]);            // "Ana"  índice empieza en 0
+console.log(cola.length);        // 2      cantidad
+
+cola.push("Marta");              // agrega AL FINAL
+cola.unshift("Pedro");           // agrega AL INICIO
+console.log(cola);               // ["Pedro","Ana","Luis","Marta"]
+
+let ultimo = cola.pop();         // saca el ÚLTIMO  (pila)
+let primero = cola.shift();      // saca el PRIMERO (cola)
+console.log(ultimo, primero, cola);
+
+console.log(cola.includes("Ana"));   // true  ¿está?
+console.log(cola.indexOf("Luis"));   // 1     ¿en qué posición? (-1 si no)
+
+
+let cola = ["Ana", "Luis"];      // se crea con [ ]
+
+console.log(cola[0]);            // "Ana"  índice empieza en 0
+console.log(cola.length);        // 2      cantidad
+
+cola.push("Marta");              // agrega AL FINAL
+cola.unshift("Pedro");           // agrega AL INICIO
+console.log(cola);               // ["Pedro","Ana","Luis","Marta"]
+
+let ultimo = cola.pop();         // saca el ÚLTIMO  (pila)
+let primero = cola.shift();      // saca el PRIMERO (cola)
+console.log(ultimo, primero, cola);
+
+console.log(cola.includes("Ana"));   // true  ¿está?
+console.log(cola.indexOf("Luis"));   // 1     ¿en qué posición? (-1 si no)
+
+
+let pasajeros = [
+  { nombre: "Ana",   edad: 28, vip: true  },
+  { nombre: "Luis",  edad: 9,  vip: false },
+  { nombre: "Marta", edad: 45, vip: true  },
+];
+
+// map: transforma CADA elemento → nuevo array del mismo tamaño
+let nombres = pasajeros.map(p => p.nombre);
+console.log(nombres);                       // ["Ana","Luis","Marta"]
+
+// filter: se queda con los que cumplen → array más corto
+let vips = pasajeros.filter(p => p.vip);
+console.log(vips.length);                   // 2
+
+// find: devuelve el PRIMERO que cumple (o undefined)
+let nino = pasajeros.find(p => p.edad < 12);
+console.log(nino.nombre);                   // "Luis"
+
+
+// Un objeto agrupa datos con nombre (como un dict de Python)
+let p = { nombre: "Ana", asiento: "1A", edad: 28 };
+
+console.log(p.nombre);          // leer con punto
+console.log(p["asiento"]);      // o con corchetes (útil con variables)
+
+p.asiento = "3C";               // modificar
+p.vip = true;                   // agregar una clave nueva
+delete p.edad;                  // borrar una clave
+console.log(p);
+
+// Recorrer claves y valores
+for (const clave in p) {
+  console.log(clave, "→", p[clave]);
+}
+console.log(Object.keys(p));    // ["nombre","asiento","vip"]
+
+// Desestructurar: sacar valores a variables
+const { nombre, asiento } = p;
+console.log(nombre, asiento);
+
+// Atajo: si la variable se llama igual que la clave
+const nuevo = { nombre, asiento };   // = { nombre: nombre, asiento: asiento }
+console.log(nuevo);
+
+
+class Pasajero {
+  // constructor = __init__ de Python: se ejecuta con new
+  constructor(nombre, asiento) {
+    this.nombre = nombre;        // this = self
+    this.asiento = asiento;
+  }
+  // método: función que pertenece a la clase (sin "function")
+  presentar() {
+    return `${this.nombre} (${this.asiento})`;
+  }
+}
+
+const a = new Pasajero("Ana", "1A");   // new crea el objeto
+const b = new Pasajero("Luis", "2B");
+console.log(a.presentar());
+console.log(b.nombre);
+
+// Herencia con extends (como class Vip(Pasajero) en Python)
+class PasajeroVip extends Pasajero {
+  presentar() {
+    return "⭐ " + super.presentar();  // super = el método del padre
+  }
+}
+console.log(new PasajeroVip("Marta", "1C").presentar());
+
+
+// JSON = el formato de TEXTO para enviar datos (al servidor, a un archivo)
+let p = { nombre: "Ana", asiento: "1A" };
+
+let texto = JSON.stringify(p);    // objeto → texto JSON
+console.log(texto);               // '{"nombre":"Ana","asiento":"1A"}'
+console.log(typeof texto);        // "string"
+
+let objeto = JSON.parse(texto);   // texto JSON → objeto
+console.log(objeto.nombre);       // "Ana"
+
+
+function reservar(asiento) {
+  if (asiento === "") {
+    throw new Error("Falta el asiento");  // lanza un error a propósito
+  }
+  return `Reservado ${asiento}`;
+}
+
+try {                              // intenta...
+  console.log(reservar("1A"));
+  console.log(reservar(""));       // aquí falla y salta al catch
+  console.log("esto no se ejecuta");
+} catch (error) {                  // ...si algo falla, atrapa el error
+  console.log("⚠️", error.message);
+} finally {                        // se ejecuta SIEMPRE
+  console.log("Fin del proceso");
+}
+
+DOOM Y EVENTOS
+1. Buscar elementos
+<h3 id="titulo">Pasajeros</h3>
+<p class="pasajero">Ana</p>
+<p class="pasajero">Luis</p>
+<p class="pasajero">Marta</p>
+
+<script>
+  // Por id → UN elemento
+  const titulo = document.getElementById("titulo");
+  titulo.style.color = "#1A73E8";
+
+  // querySelector → el PRIMERO que coincide con un selector CSS
+  const primero = document.querySelector(".pasajero");
+  primero.style.fontWeight = "bold";
+
+  // querySelectorAll → TODOS (una lista que se recorre)
+  const todos = document.querySelectorAll(".pasajero");
+  todos.forEach(p => p.textContent += " ✔");     // agrega ✔ a cada uno
+  titulo.textContent += ` (${todos.length})`;     // muestra cuántos hay
+</script>
+
+
+2. Leer y cambiar contenido
+<input id="nombre" value="Pedro">
+<p id="a"></p>
+<p id="b"></p>
+
+<script>
+  const input = document.getElementById("nombre");
+  const nombre = input.value;          // .value = lo escrito en un input
+
+  // textContent: pone TEXTO plano (las etiquetas se ven tal cual)
+  document.getElementById("a").textContent = `<b>${nombre}</b>`;
+
+  // innerHTML: interpreta el texto como HTML (la <b> se vuelve negrita)
+  document.getElementById("b").innerHTML = `<b>${nombre}</b>`;
+
+  input.value = "";                    // vacía la casilla
+</script>
+
+
+3. Cambiar estilos y clases
+<style>
+  .asiento { display: inline-block; padding: 8px 12px; border-radius: 6px;
+             background: #E6F4EA; cursor: pointer; }
+  .ocupado { background: #FCE8E6; text-decoration: line-through; }
+</style>
+
+<div class="asiento" id="s1">1A</div>
+<div class="asiento" id="s2">1B</div>
+<p>👆 Haz clic en los asientos</p>
+
+<script>
+  const s1 = document.getElementById("s1");
+  s1.style.border = "2px solid green";   // style.propiedad (camelCase en JS)
+
+  // classList: la forma correcta de cambiar estilos
+  // add() agrega · remove() quita · toggle() pone/quita · contains() pregunta
+  document.querySelectorAll(".asiento").forEach(a => {
+    a.onclick = () => a.classList.toggle("ocupado");
+  });
+</script>
+
+
+4. Crear y borrar elementos
+<button id="agregar">Agregar pasajero</button>
+<ul id="lista"></ul>
+
+<script>
+  let n = 0;
+  document.getElementById("agregar").onclick = () => {
+    n++;
+    const li = document.createElement("li");   // 1. crea un <li> (aún invisible)
+    li.textContent = `Pasajero ${n} `;         // 2. le pone texto
+
+    const x = document.createElement("button");
+    x.textContent = "❌";
+    x.onclick = () => li.remove();             // remove(): lo borra de la página
+    li.append(x);                              // mete el botón dentro del li
+
+    document.getElementById("lista").append(li); // 3. lo pone en la lista (ya se ve)
+  };
+</script>
+
+
+Evento	Cuándo ocurre
+click	Clic en el elemento
+input	Cada vez que cambia lo escrito en un input
+change	Al cambiar un select o checkbox
+keydown	Al presionar una tecla
+submit	Al enviar un formulario
+mouseover	El mouse entra al elemento
+
+<form id="form">
+  <input id="nombre" placeholder="Nombre">
+  <select id="clase">
+    <option>Económica</option><option>Ejecutiva</option>
+  </select>
+  <button>Reservar</button>
+</form>
+<p id="vista">Escribe un nombre...</p>
+<p id="log"></p>
+
+<script>
+  const nombre = document.getElementById("nombre");
+  const vista = document.getElementById("vista");
+
+  // input: se dispara con CADA letra
+  nombre.addEventListener("input", () => {
+    vista.textContent = "Vista previa: " + nombre.value;
+  });
+
+  // change: al elegir otra opción. e = el objeto evento
+  document.getElementById("clase").addEventListener("change", (e) => {
+    vista.textContent = "Clase: " + e.target.value;  // e.target = quién lo disparó
+  });
+
+  // keydown: e.key dice qué tecla fue
+  nombre.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") nombre.value = "";        // Esc borra
+  });
+
+  // submit: el form intenta recargar la página → lo evitamos
+  document.getElementById("form").addEventListener("submit", (e) => {
+    e.preventDefault();                               // ¡NO recargues!
+    document.getElementById("log").textContent = "✅ Reservado: " + nombre.value;
+  });
+</script>
+
+JS FETCH (servidor)
+1. La espera: async / await
+Pedir algo a un servidor tarda (milisegundos o segundos). JS no se queda congelado: fetch devuelve una promesa («te aviso cuando llegue»). Con await le dices «espera aquí hasta que llegue». await solo funciona dentro de una función async.
+
+// Simulamos un servidor lento con una promesa que tarda 1 segundo
+function servidorLento() {
+  return new Promise(resolve => {
+    setTimeout(() => resolve("✈️ datos listos"), 1000);  // responde en 1 s
+  });
+}
+
+async function cargar() {          // async: aquí dentro se puede usar await
+  console.log("1. Pido los datos...");
+  const datos = await servidorLento();   // espera SIN congelar la página
+  console.log("2. Llegaron:", datos);
+}
+
+cargar();
+console.log("Mientras tanto, JS sigue con otras cosas");  // ¡sale antes del 2!
+
+2. Tu primer fetch (GET)
+Este primero funciona sin internet: pedimos a una dirección especial data: que ya trae el JSON adentro (simula un servidor).
+
+// URL "falsa" que contiene el JSON (en la vida real: "/api/pasajeros")
+const url = 'data:application/json,[{"nombre":"Ana","asiento":"1A"},{"nombre":"Luis","asiento":"2B"}]';
+
+async function cargarPasajeros() {
+  const respuesta = await fetch(url);       // ① pide y espera la respuesta
+  console.log("Estado:", respuesta.status); // 200 = OK
+
+  const datos = await respuesta.json();     // ② convierte el cuerpo JSON → array JS
+  console.log("Recibidos:", datos.length);
+
+  datos.forEach(p => console.log(`${p.nombre} - ${p.asiento}`));  // ③ usar los datos
+}
+
+cargarPasajeros();
+
+3. Un servidor de verdad (necesita internet)
+JSONPlaceholder es una API gratuita de práctica. Pedimos sus usuarios y los convertimos en pasajeros.
+async function cargarUsuarios() {
+  try {
+    const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    // fetch NO lanza error con 404 o 500: hay que revisar resp.ok
+    if (!resp.ok) {
+      throw new Error("El servidor respondió " + resp.status);
+    }
+
+    const usuarios = await resp.json();          // array de 10 usuarios
+
+    // map: convertimos cada usuario en un pasajero
+    const pasajeros = usuarios.map((u, i) => ({
+      nombre: u.name,
+      asiento: `${i + 1}A`,
+    }));
+    pasajeros.slice(0, 5).forEach(p => console.log(p.asiento, p.nombre));
+
+  } catch (error) {
+    // entra aquí si no hay internet o si lanzamos el Error de arriba
+    console.log("❌ No se pudo cargar:", error.message);
+  }
+}
+
+cargarUsuarios();
+
+4. Enviar datos (POST)
+async function registrar(pasajero) {
+  try {
+    const resp = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",                                   // tipo de petición
+      headers: { "Content-Type": "application/json" },  // "te mando JSON"
+      body: JSON.stringify(pasajero),                   // objeto → texto JSON
+    });
+    const guardado = await resp.json();                 // lo que devuelve el servidor
+    console.log("Estado:", resp.status);                // 201 = creado
+    console.log("Guardado con id:", guardado.id, guardado);
+  } catch (error) {
+    console.log("❌", error.message);
+  }
+}
+
+registrar({ nombre: "Pedro", asiento: "4D" });
+
+5. La otra forma: .then()
+Verás mucho código antiguo así. Hace lo mismo que await, encadenando funciones:
+
+fetch('data:application/json,{"nombre":"Ana","asiento":"1A"}')
+  .then(resp => resp.json())          // cuando llega la respuesta → JSON
+  .then(p => {                        // cuando el JSON está listo → usarlo
+    console.log(p.nombre, p.asiento);
+  })
+  .catch(err => {                     // si algo falló en cualquier paso
+    console.log("❌", err.message);
+  });
+
+
+6. fetch + lista enlazada + DOM
+Todo junto: el botón pide los pasajeros a la API, los mete en la lista enlazada y los dibuja.
+
+<style>
+  body  { font-family: sans-serif; }
+  .tren { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .nodo { border: 2px solid #7B3FE4; background: #F3E8FD; border-radius: 8px;
+          padding: 4px 10px; font-size: 13px; }
+</style>
+
+<button id="cargar">🌐 Cargar pasajeros del servidor</button>
+<p id="estado"></p>
+<div id="tren" class="tren"></div>
+
+<script>
+  // --- Lista enlazada mínima ---
+  class Nodo {
+    constructor(data) { this.data = data; this.next = null; }
+  }
+  class ListaEnlazada {
+    constructor() { this.head = null; }
+    insertarFinal(data) {
+      const nuevo = new Nodo(data);
+      if (!this.head) { this.head = nuevo; return; }   // lista vacía
+      let actual = this.head;
+      while (actual.next) actual = actual.next;        // camina al último
+      actual.next = nuevo;                             // engancha
+    }
+  }
+  const lista = new ListaEnlazada();
+
+  // --- Dibujar recorriendo la lista ---
+  function dibujar() {
+    let html = "", actual = lista.head;
+    while (actual) {
+      html += `<span class="nodo">${actual.data.nombre}</span> →`;
+      actual = actual.next;
+    }
+    document.getElementById("tren").innerHTML = html + " null";
+  }
+
+  // --- fetch al hacer clic ---
+  document.getElementById("cargar").onclick = async () => {
+    const estado = document.getElementById("estado");
+    estado.textContent = "⏳ Cargando...";
+    try {
+      const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+      if (!resp.ok) throw new Error("Error " + resp.status);
+      const usuarios = await resp.json();
+      usuarios.forEach(u => lista.insertarFinal({ nombre: u.username }));
+      estado.textContent = `✅ ${usuarios.length} pasajeros cargados`;
+      dibujar();
+    } catch (e) {
+      estado.textContent = "❌ Sin conexión: " + e.message;
+    }
+  };
+</script>
+
+7. Conectar con TU backend (Flask)
+Cuando tengas tu servidor, solo cambias la URL. Así se ve el código del lado del navegador:
+const API = "/api/pasajeros";        // ruta de tu servidor Flask
+
+// GET: traer todos los pasajeros guardados
+async function obtenerPasajeros() {
+  const resp = await fetch(API);
+  if (!resp.ok) throw new Error("No se pudo obtener la lista");
+  return await resp.json();          // ej: [{nombre:"Ana", asiento:"1A"}, ...]
+}
+
+// POST: guardar un pasajero nuevo
+async function crearPasajero(pasajero) {
+  const resp = await fetch(API, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(pasajero),  // { nombre, asiento }
+  });
+  return await resp.json();          // el servidor responde lo guardado
+}
+
+// DELETE: borrar por nombre (la ruta incluye el dato)
+async function eliminarPasajero(nombre) {
+  const resp = await fetch(`${API}/${encodeURIComponent(nombre)}`, {
+    method: "DELETE",
+  });
+  return resp.ok;                    // true si se borró
+}
+⚠️ Errores típicos con fetch
+Olvidar await → obtienes Promise {<pending>} en vez de los datos. · Olvidar .json() → tienes la respuesta, no los datos. · CORS → el servidor no permite que tu página le pida datos (se configura en el backend). · Abrir el .html con doble clic y pedir /api/... → no hay servidor detrás.
+
